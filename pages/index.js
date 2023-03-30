@@ -1,11 +1,12 @@
 import React from "react"
-import { Button } from "@nextui-org/react"
-import LayoutPrincipal from "@/components/LayoutPrincipal"
+import { Button, Grid } from "@nextui-org/react"
+import Layout from "@/components/Layout"
 
 export default function Home() {
   return (
-    <LayoutPrincipal>
-      
-    </LayoutPrincipal>
+<Layout >
+  
+</Layout>
+
     )
 }
