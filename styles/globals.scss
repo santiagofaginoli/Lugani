@@ -1,42 +1,96 @@
-body{
-    background: #f3ebda;
-    height: 100%;
+:root{
+  height: 100%;
 }
-
-.navbar{
-    width: auto;
-    height: auto;
-    justify-content: center;
-    min-height: auto;
-
+body {
+  background: #f3ebda;
+  height: 100%;
 }
-.content-navbar{
-    border-radius: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    //background-color: rgb(133, 209, 171);
-   background: #96ebc0;
-    width: 100%;
-    height:50px;
+.navbar {
+  width: auto;
+  height: auto;
+  justify-content: center;
+  min-height: auto;
+}
+.content-navbar {
+  border-radius: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  //background-color: rgb(133, 209, 171);
+  background: #96ebc0;
+  width: 100%;
+  height: 50px;
+}
+.nextui-c-hhqfap-ieQnWyR-css {
+  background: transparent;
 }
 .nextui-c-hhqfap-juUqGF-cv .nextui-c-egxOLa {
-    box-shadow:none
+  box-shadow: none;
 }
 .nextui-c-egxOLa {
-    width: 100%;
-    min-height: auto;
-    padding: 0;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    max-width:auto;
+  width: 100%;
+  min-height: auto;
+  padding: 0;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  max-width: auto;
+}
+.items-navbar {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.items-navbar:hover {
+  //background: rgb(172, 232, 210);
+  background: #9ef7cb;
+  border-radius: 60px;
+}
 
+
+// -----------------------------------------Contactanos---------------------------------------------
+.titulo{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 160px;
+line-height: 167px;
+/* or 105% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -4px;
+
+color: #025A4E;
 }
-.items-navbar{
-    margin-left: 5px;
-    margin-right: 5px;
+.card-contacto{
+background: #EAA4A4;
+border-radius: 64px;
 }
-.items-navbar:hover{
- //background: rgb(172, 232, 210);
-background: #9ef7cb;
- border-radius: 60px;
+.card-form-contacto{
+  background: transparent;
+}
+.boton-form{
+  background-color: #f3ebda;
+  color: black;
+  border-radius: 64px;
+  -webkit-border-radius: 64px;
+  -moz-border-radius: 64px;
+  -ms-border-radius: 64px;
+  -o-border-radius: 64px;
+}
+////////////////////////////////////FOOTER////////////////////////////////////////////////////
+.logo-ig{
+  height:60px;
+  width: 60px;
+  padding: 10px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  backdrop-filter: blur(10px);
+}
+.logo-ig:hover{
+  transform: translateY(-58px) scale(1.25);
+  transition-delay: 0.1s, 0.1s;
+  background-color: white;
 }
