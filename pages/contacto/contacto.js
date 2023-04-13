@@ -19,6 +19,7 @@ import Layout from "@/components/Layout";
 export default function contacto() {
   return (
     <Layout>
+      <Spacer></Spacer>
       <Grid.Container>
         <Grid.Container justify="center">
           <Grid>
@@ -30,18 +31,16 @@ export default function contacto() {
             <Card.Body css={{ py: "$10" }}>
               <Grid.Container alignItems="center">
                 <Grid.Container xs={6}>
-                  <Card className="card-form-contacto"  css={{ mw: "100%",alignItems:"center" }}>
-                    <Grid alignItems="center">
-                      <Form></Form>
-                    </Grid>
-                  </Card>
+                  <Grid alignItems="center">
+                    <Form></Form>
+                  </Grid>
                 </Grid.Container>
                 <Grid.Container xs={6}>
                   <Image
                     width={"90%"}
                     height={"90%"}
                     layout='intrinsic'
-                    src={'/img/38.jpg'}
+                    src={'/img/contacto.jpg'}
                     alt={'imagen'}
                     className="imagen-contacto"
                   >
