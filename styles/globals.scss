@@ -1,8 +1,9 @@
 :root{
   height: 100%;
+  background: linear-gradient( to bottom, hsla(36, 31%, 90%, 0) 0%, hsla(36, 31%, 90%, .013) 9.7%, hsla(36, 31%, 90%, .049) 18.1%, hsla(36, 31%, 90%, .104) 25.5%, hsla(36, 31%, 90%, .175) 31.9%, hsla(36, 31%, 90%, .259) 37.7%, hsla(36, 31%, 90%, .352) 43%, hsla(36, 31%, 90%, .45) 47.9%, hsla(36, 31%, 90%, .55) 52.8%, hsla(36, 31%, 90%, .648) 57.7%, hsla(36, 31%, 90%, .741) 63%, hsla(36, 31%, 90%, .825) 68.7%, hsla(36, 31%, 90%, .896) 75%, hsla(36, 31%, 90%, .951) 82.2%, hsla(36, 62%, 85%, 0.987) 90.5%, hsl(36, 31%, 90%) 100% );
 }
 body {
-  background: #f3ebda;
+ 
   height: 100%;
 }
 .navbar {
@@ -44,53 +45,25 @@ body {
   border-radius: 60px;
 }
 
-
-// -----------------------------------------Contactanos---------------------------------------------
 .titulo{
   font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 160px;
-line-height: 167px;
-/* or 105% */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 90px;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #025A4E;
+  margin: 0 0;
+  padding: 0 0;
+}
+.frase{
+  color: #4C6763;
+}
+.nextui-c-dwnaVv {
+  
+  background: rgb(103, 148, 185)
 
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -4px;
-
-color: #025A4E;
-}
-.card-contacto{
-background: #EAA4A4;
-border-radius: 64px;
-}
-.card-form-contacto{
-  background: transparent;
-}
-.boton-form{
-  background-color: #f3ebda;
-  color: black;
-  border-radius: 64px;
-  -webkit-border-radius: 64px;
-  -moz-border-radius: 64px;
-  -ms-border-radius: 64px;
-  -o-border-radius: 64px;
-}
-////////////////////////////////////FOOTER////////////////////////////////////////////////////
-.logo-ig{
-  height:60px;
-  width: 60px;
-  padding: 10px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  backdrop-filter: blur(10px);
-}
-.logo-ig:hover{
-  transform: translateY(-58px) scale(1.25);
-  transition-delay: 0.1s, 0.1s;
-  background-color: white;
 }

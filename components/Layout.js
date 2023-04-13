@@ -18,40 +18,6 @@ export default function Layout({ children }) {
         </Navbar>
       </Grid.Container>
       {children}
-      <Grid.Container justify="center" style={{ marginTop: "80px", }} >
-        <Grid.Container xs={3} alignItems="center" style={{ backgroundColor: "white", borderRadius: "25px", height: "80px" }} justify="center">
-          <Grid xs={4}>
-            <Image
-              width={"70px"}
-              height={"70px"}
-              layout='intrinsic'
-              alt={'instagram'}
-              className="logo-ig"
-              src={"/img/instagram.svg"}>
-            </Image>
-          </Grid>
-          <Grid xs={4}>
-            <Image
-              width={"70px"}
-              height={"70px"}
-              layout='intrinsic'
-              alt={'instagram'}
-              className="logo-ig"
-              src={"/img/instagram.svg"}>
-            </Image>
-          </Grid>
-          <Grid xs={4}>
-            <Image
-              width={"70px"}
-              height={"70px"}
-              layout='intrinsic'
-              alt={'instagram'}
-              className="logo-ig"
-              src={"/img/instagram.svg"}>
-            </Image>
-          </Grid>
-        </Grid.Container>
-      </Grid.Container>
     </>
   );
 }
