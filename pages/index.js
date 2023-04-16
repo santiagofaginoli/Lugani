@@ -1,6 +1,7 @@
 import React from "react";
-import { Grid, Spacer, Text, Card, Image, Progress, Row, Col, Button, Modal, Input } from "@nextui-org/react";
+import { Grid, Spacer, Text, Card, Image, Progress, Button, Modal, Input, Textarea } from "@nextui-org/react";
 import Layout from "@/components/Layout";
+import SwiperMSG from "@/components/SwiperMsg";
 
 export default function Home() {
   const [visible, setVisible] = React.useState(false);
@@ -16,17 +17,17 @@ export default function Home() {
       <section id="Home" style={{ marginTop: "50px" }}>
         <Grid.Container justify="center">
           <Grid xs={12} justify="center">
-            <Text className="titulo" >
+            <Text className="titulo divgeek" >
               We are DivGeeks
             </Text>
           </Grid>
-          <Grid className="titulo-abajo"  justify="center">
-            <Text className="titulo" >
+          <Grid className="titulo-abajo" justify="center">
+            <Text className="titulo divgeek" >
               Web developers
             </Text>
           </Grid>
           <Grid.Container justify="center">
-            <Text className="frase">
+            <Text className="frase divgeek">
               If you can imagine it, we can program it
             </Text>
           </Grid.Container>
@@ -47,7 +48,7 @@ export default function Home() {
             style={{ marginTop: "25px" }}
           >
             <Grid xs={11} md={4}>
-              <Card css={{ bg: "#E1C190", br: "64px",mb:'25px' }}>
+              <Card css={{ bg: "#E1C190", br: "64px", mb: '25px' }}>
                 <Image
                   width={"100%"}
                   height={300}
@@ -95,8 +96,8 @@ export default function Home() {
             justify="center"
             style={{ marginTop: "25px" }}
           >
-            <Grid xs={11} md={6} css={{ height: "100%" }}>
-              <Card css={{ bg: "#BAE0F5", br: "64px", p: "20px",mb:'25px' }}>
+            <Grid xs={11} md={6} css={{ height: "300px" }}>
+              <Card css={{ bg: "#BAE0F5", br: "64px", p: "20px", mb: '25px' }}>
                 <Card.Body
                   css={{ textAlign: "center", alignItems: "center", flexDirection: "row" }}
                 >
@@ -163,7 +164,7 @@ export default function Home() {
             </Grid>
           </Grid.Container>
           <Grid.Container justify="center">
-            <Grid xs={5}>
+            <Grid md={5} xs={11}>
               <Card css={{ bg: "#BAE0F5", br: "64px", p: "20px" }}>
                 <Card.Body
                   css={{ textAlign: "center", alignItems: "center", flexDirection: "row", justifyContent: "center " }}
@@ -179,32 +180,27 @@ export default function Home() {
                 </Card.Body>
                 <Card.Footer
                   isBlurred
-                  css={{
-                    alignItems: "center",
-                    justifyContent: 'center',
-                    position: "absolute",
-                    bg: "transparent",
-                    backdropFilter: "none",
-                    bottom: '63%',
-                    zIndex: 1,
-                  }}
+                  className="boton-modal"
                 >
-                  <Button auto css={{ bg: 'transparent', color: 'black' }} onPress={handler}>
-                    Click here
-                  </Button>
+                  <Grid>
+                    <Button auto css={{ bg: 'transparent', color: 'black' }} onPress={handler}>
+                      <Text className="texto-modal">
+                        Click here
+                      </Text>
+                    </Button>
+                  </Grid>
                   {/*-------------------------------------------MODAL-----------------------------------------*/}
                   <Modal
+                    blur
+                    css={{ bg: '#16181a', }}
                     closeButton
                     aria-labelledby="modal-title"
                     open={visible}
                     onClose={closeHandler}
                   >
                     <Modal.Header>
-                      <Text id="modal-title" size={18}>
-                        Welcome to
-                        <Text b size={18}>
-                          NextUI
-                        </Text>
+                      <Text css={{ color: '#ffffff' }} id="modal-title" b size={18}>
+                        DivGeeks
                       </Text>
                     </Modal.Header>
                     <Modal.Body>
@@ -214,36 +210,51 @@ export default function Home() {
                         fullWidth
                         color="primary"
                         size="lg"
-                        placeholder="Email"
+                        placeholder="Name"
+                        contentLeft={<svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="User / User_02"> <path id="Vector" d="M20 21C20 18.2386 16.4183 16 12 16C7.58172 16 4 18.2386 4 21M12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13Z" stroke="#3a3d44" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g> </g></svg>}
                       />
-                      <Input
-                        clearable
+                      <Textarea
                         bordered
-                        fullWidth
                         color="primary"
+                        fullWidth
                         size="lg"
-                        placeholder="Password"
+                        placeholder='✉ Message'
                       />
-                      <Row justify="space-between">
-                        <Text size={14}>Forgot password?</Text>
-                      </Row>
+                      <Grid.Container justify="center">
+                        <Grid>
+                          <div class="clasificacion">
+                            <input id="radio1" type="radio" name="estrellas" value="1" />
+                            <label for='radio1' ><svg width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg></label>
+                            <input id="radio2" type="radio" name="estrellas" value="2" />
+                            <label for='radio2' > <svg width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg></label>
+                            <input id="radio3" type="radio" name="estrellas" value="3" />
+                            <label for='radio3' > <svg f width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg></label>
+                            <input id="radio4" type="radio" name="estrellas" value="4" />
+                            <label for='radio4' > <svg width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg></label>
+                            <input id="radio5" type="radio" name="estrellas" value="5" />
+                            <label for='radio5' ><svg width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>star</title> <path d="M3.488 13.184l6.272 6.112-1.472 8.608 7.712-4.064 7.712 4.064-1.472-8.608 6.272-6.112-8.64-1.248-3.872-7.808-3.872 7.808z"></path> </g></svg> </label>
+                          </div>
+                        </Grid>
+                      </Grid.Container>
                     </Modal.Body>
                     <Modal.Footer>
-                      <Button auto flat color="error" onPress={closeHandler}>
+                      <Button css={{ bg: '#3a3d44', color: 'White' }} auto flat onPress={closeHandler}>
                         Close
                       </Button>
-                      <Button auto onPress={closeHandler}>
-                        Sign in
+                      <Button css={{ bg: '#3a3d44', color: 'White' }} auto onPress={closeHandler}>
+                        Send <svg fill="#fff" width="40px" height="40px" viewBox="-8 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>paper-plane</title> <path d="M5.64 25.24c-0.12 0-0.24-0.040-0.36-0.080-0.28-0.16-0.48-0.44-0.48-0.76v-4.36c0-0.2 0.080-0.4 0.2-0.56l6-6.6c0.32-0.36 0.84-0.36 1.2-0.040s0.36 0.84 0.040 1.2l-5.76 6.32v2.36l3.36-2.52c0.24-0.16 0.56-0.2 0.8-0.12l2.12 0.84 1.8-11.8-12 6.68 1.92 1.12c0.4 0.24 0.52 0.76 0.28 1.16s-0.76 0.52-1.16 0.28l-3.2-1.88c-0.28-0.16-0.4-0.44-0.4-0.72 0-0.32 0.16-0.56 0.44-0.72l14.8-8.16c0.28-0.16 0.64-0.12 0.88 0.040 0.28 0.2 0.4 0.48 0.36 0.8l-2.24 14.52c-0.040 0.24-0.2 0.48-0.4 0.6s-0.48 0.16-0.72 0.040l-2.68-1.080-4.32 3.24c-0.12 0.12-0.28 0.2-0.48 0.2z"></path> </g></svg>
                       </Button>
                     </Modal.Footer>
                   </Modal>
                 </Card.Footer>
               </Card>
             </Grid>
-            <Spacer />
-            <Grid xs={5}>
+            <Grid md={1} xs={0}></Grid>
+            <Grid md={5} xs={11}>
               <Card css={{ bg: "#BAE0F5", br: "64px", p: "20px" }}>
-
+                <Card.Body css={{ flexDirection: "row" }}>
+                  <SwiperMSG></SwiperMSG>
+                </Card.Body>
               </Card>
             </Grid>
           </Grid.Container>
