@@ -9,8 +9,8 @@ export default function Layout({ children }) {
           <Navbar className="navbar" variant="floating">
             <Navbar.Content className="content-navbar"  variant="highlight-rounded">
               <Navbar.Link className="items-navbar" href="/">Home</Navbar.Link>
-              <Navbar.Link className="items-navbar" href="/contacto/contacto">Contacto</Navbar.Link>
-              <Navbar.Link className="items-navbar" href="/#Project">Projects</Navbar.Link>
+              <Navbar.Link className="items-navbar" href="/contacto/contacto">Contact</Navbar.Link>
+              <Navbar.Link className="items-navbar" href="/#Project">Work</Navbar.Link>
               <Navbar.Link className="items-navbar" href="/#Skills">Skills</Navbar.Link>
             </Navbar.Content>
             </Navbar>

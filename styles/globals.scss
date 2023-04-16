@@ -11,6 +11,8 @@ body {
   width: auto;
   height: auto;
   justify-content: center;
+  animation: navanimacion 2s linear;
+  -webkit-animation: navanimacion 2s linear;
 }
 .content-navbar {
   border-radius: 60px;
@@ -47,6 +49,7 @@ body {
   //background: rgb(172, 232, 210);
   background: #9ef7cb;
   border-radius: 60px;
+  transition: all .5s;
 }
 /*----------------------------clases en Textos------------------------------------------*/
 .titulo {
@@ -108,12 +111,13 @@ body {
 }
 /*----------------------------clases de Contacto------------------------------------------*/
 .card-contacto{
-  background-color: rgb(253, 179, 179);
+  background-color: #172920;
 }
 .boton-form{
   background:#ede7de;
   color: #000000;
 }
+
 /*----------------------------clases de Modal------------------------------------------*/
 .boton-modal{
   position: absolute;
@@ -181,9 +185,24 @@ div.clasificacion input:checked ~ label {
 @keyframes animacionTitulo {
   0%{
     opacity: 50%;
-    transform:    translateY(-100px);
+    filter: blur(5px);
+    transform:    translateX(-100px);
 }
   100%{
     transform:    translateY(0px);
+}
+}
+html{
+  scroll-behavior: smooth;
+}
+
+@keyframes navanimacion {
+  0%{
+    opacity: 50%;
+    filter: blur(5px);
+    transform:    translateY(-100px);
+}
+  100%{
+    transform:    translateX(0px);
 }
 }

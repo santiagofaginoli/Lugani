@@ -16,29 +16,37 @@ export default class Form extends Component {
   render() {
     return (
       <Grid.Container alignItems="center" justify="center">
-        <form >
-          <Grid.Container >
+        <form>
+          <Grid.Container>
             <Grid.Container justify="center">
               <Grid justify="center" xs={4}>
                 <Input
-                  aria-label="nombre"
                   css={{ h: "100%", w: "100%" }}
-                  placeholder="Nombre"
+                  labelPlaceholder="Name"
+                  arial-label="nombre"
                   type="text"
-                  id="nombre"
+                  color="success"
+                  bordered
+                  status="default"
                   name="nombre"
+                  id="nombre"
+                  underlined
                 />
               </Grid>
 
               <Spacer></Spacer>
               <Grid xs={4}>
                 <Input
-                  aria-label="email"
                   css={{ h: "100%", w: "100%" }}
-                  placeholder="Email"
+                  labelPlaceholder="Email"
+                  arial-label="email"
                   type="text"
-                  id="email"
+                  color="success"
+                  bordered
+                  status="email"
                   name="email"
+                  id="email"
+                  underlined
                 />
               </Grid>
             </Grid.Container>
@@ -46,22 +54,24 @@ export default class Form extends Component {
             <Grid.Container justify="center">
               <Grid xs={7}>
                 <Textarea
-                aria-label="mensaje"
-                  placeholder="Contenido"
-                  id="mensaje"
-                  name="mensaje"
+                  Placeholder="Message"
                   type="text"
+                  color="success"
+                  bordered
+                  status="default"
+                  name="mensaje"
+                  id="mensaje"
                   minRows={5}
                   maxRows={10}
-                  css={{ h: "100%", w: "100%" }}
+                  css={{ h: "100%", w: "100%", color: "Black" }}
                 />
               </Grid>
             </Grid.Container>
             <Spacer y={1}></Spacer>
             <Grid.Container>
               <Grid xs={12} justify="center">
-                <Button  type="submit" className="boton-form">
-                  Enviar
+                <Button type="submit" className="boton-form">
+                  Send
                 </Button>
               </Grid>
             </Grid.Container>
