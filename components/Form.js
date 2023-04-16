@@ -21,6 +21,7 @@ export default class Form extends Component {
             <Grid.Container justify="center">
               <Grid justify="center" xs={4}>
                 <Input
+                  aria-label="nombre"
                   css={{ h: "100%", w: "100%" }}
                   placeholder="Nombre"
                   type="text"
@@ -28,10 +29,11 @@ export default class Form extends Component {
                   name="nombre"
                 />
               </Grid>
-              
+
               <Spacer></Spacer>
               <Grid xs={4}>
                 <Input
+                  aria-label="email"
                   css={{ h: "100%", w: "100%" }}
                   placeholder="Email"
                   type="text"
@@ -44,6 +46,7 @@ export default class Form extends Component {
             <Grid.Container justify="center">
               <Grid xs={7}>
                 <Textarea
+                aria-label="mensaje"
                   placeholder="Contenido"
                   id="mensaje"
                   name="mensaje"
@@ -57,7 +60,7 @@ export default class Form extends Component {
             <Spacer y={1}></Spacer>
             <Grid.Container>
               <Grid xs={12} justify="center">
-                <Button type="submit" className="boton-form">
+                <Button  type="submit" className="boton-form">
                   Enviar
                 </Button>
               </Grid>
