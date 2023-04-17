@@ -154,6 +154,8 @@ div.clasificacion label:hover,
 div.clasificacion label:hover ~ label,
 div.clasificacion input:checked ~ label {
   fill: #dd4;
+  stroke: #000000;
+  stroke-width: 0.3px;
 }
 .nextui-c-jeuecp {
   color: #Ffff;
