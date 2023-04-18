@@ -12,6 +12,7 @@ import {
   Modal,
   Input,
   Textarea,
+  Loading,
   Col,
   Row,
 } from "@nextui-org/react";
@@ -20,15 +21,11 @@ import { MongoClient } from "mongodb";
 import Layout from "/components/Layout";
 import SwiperMSG from "/components/SwiperMsg";
 import Swal from "sweetalert2";
-import { useRouter } from "next/router";
-export default function Home( { resenas} ) {
-    {/*  modal*/}
+export default function Home({ resenas }) {
+
   const [visible, setVisible] = useState(false);
-  const handler = () => setVisible(true);
-  const closeHandler = () => {
-    setVisible(false);
-  };
-    {/*  modal*/}
+  const [loading, setLoading] = useState(false)
+
   const [resena, setResena] = useState({
     name: "",
     message: "",
@@ -48,6 +45,7 @@ export default function Home( { resenas} ) {
   };
 
   const handleSubmit = async () => {
+    setLoading(true)
     try {
       await fetch(`/api/resena`, {
         method: "POST",
@@ -59,7 +57,13 @@ export default function Home( { resenas} ) {
     } catch (error) {
       console.log(error);
     }
+    setLoading(false)
     setVisible(false);
+    Swal.fire({
+      icon: "success",
+      title: "Thanks you",
+      text: "Your review was sent",
+    });
   };
 
   return (
@@ -81,6 +85,15 @@ export default function Home( { resenas} ) {
         </Grid.Container>
       </section>
       <Spacer y={15} />
+      <Modal
+        blur
+        css={{ bg: "#16181a" }}
+        closeButton
+        aria-labelledby='modal-title'
+        open={loading}
+        onClose={()=>setLoading(false)}>
+        <Loading />
+      </Modal>
       {/* --------------------------------------Section de About-----------------------------------------------------*/}
       <section id='About'>
         <Grid.Container>
@@ -274,7 +287,7 @@ export default function Home( { resenas} ) {
                     <Button
                       auto
                       css={{ bg: "transparent", color: "black" }}
-                      onPress={handler}>
+                      onPress={()=>setVisible(true)}>
                       <Text className='texto-modal'>Click here</Text>
                     </Button>
                   </Grid>
@@ -285,7 +298,7 @@ export default function Home( { resenas} ) {
                     closeButton
                     aria-labelledby='modal-title'
                     open={visible}
-                    onClose={closeHandler}>
+                    onClose={()=>setVisible(false)}>
                     <Modal.Header>
                       <Text
                         css={{ color: "#ffffff" }}
@@ -523,7 +536,7 @@ export default function Home( { resenas} ) {
                         css={{ bg: "#3a3d44", color: "White" }}
                         auto
                         flat
-                        onPress={closeHandler}>
+                        onPress={()=>setVisible(false)}>
                         Close
                       </Button>
                       <Button
@@ -559,7 +572,7 @@ export default function Home( { resenas} ) {
             <Grid md={5} xs={11}>
               <Card css={{ bg: "#BAE0F5", br: "64px", p: "20px" }}>
                 <Card.Body css={{ flexDirection: "row" }}>
-                 <SwiperMSG resenas={resenas}></SwiperMSG>
+                  <SwiperMSG resenas={resenas}></SwiperMSG>
                 </Card.Body>
               </Card>
             </Grid>
@@ -570,16 +583,19 @@ export default function Home( { resenas} ) {
     </Layout>
   );
 }
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const client = await MongoClient.connect(process.env.MONGO_URL);
   const db = client.db();
-  const resena = await db.collection("resenas").find().sort({$natural:-1}).limit(7).toArray();
+  const resena = await db
+    .collection("resenas")
+    .find()
+    .sort({ $natural: -1 })
+    .limit(7)
+    .toArray();
 
   return {
     props: {
       resenas: JSON.parse(JSON.stringify(resena)),
     },
-    revalidate: 1,
   };
 }
-
