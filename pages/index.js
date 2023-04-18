@@ -22,14 +22,18 @@ import SwiperMSG from "/components/SwiperMsg";
 import Swal from "sweetalert2";
 import { useRouter } from "next/router";
 export default function Home( { resenas} ) {
-  const router = useRouter()
+    {/*  modal*/}
   const [visible, setVisible] = useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+  };
+    {/*  modal*/}
   const [resena, setResena] = useState({
     name: "",
     message: "",
     numStars: "",
   });
-  const handler = () => setVisible(true);
   const verificacion = () => {
     if (!resena.name || !resena.message || !resena.numStars) {
       Swal.fire({
@@ -55,10 +59,6 @@ export default function Home( { resenas} ) {
     } catch (error) {
       console.log(error);
     }
-    setVisible(false);
-  };
-
-  const closeHandler = () => {
     setVisible(false);
   };
 

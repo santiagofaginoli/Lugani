@@ -14,9 +14,12 @@ import {
   Textarea,
   Image,
 } from "@nextui-org/react";
-import Form from "@/components/Form";
-import Layout from "@/components/Layout";
+import Form from "/components/Form";
+import Layout from "/components/Layout";
+
+
 export default function contacto() {
+
   return (
     <Layout>
       <Spacer></Spacer>
