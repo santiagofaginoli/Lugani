@@ -2,7 +2,7 @@
 
 import { Schema, model, models } from "mongoose";
 
-const taskSchema = new Schema(
+const resenaSchema = new Schema(
   {
     name: {
       type: String,
@@ -14,10 +14,11 @@ const taskSchema = new Schema(
       type: String,
       required: true,
       trim: true,
-      maxlenght: [200, "title must be less than 200 characters"],
+      maxlenght: [200, "title must be less than 100 characters"],
     },
     numStars: {
-      type: Number,
+      type: String,
+      required: [true, "punctuation required"],
       required: true,
     },
   },
@@ -27,4 +28,4 @@ const taskSchema = new Schema(
   }
 );
 
-export default models.Task || model("Task", taskSchema);
+export default models.Resena || model("Resena", resenaSchema);

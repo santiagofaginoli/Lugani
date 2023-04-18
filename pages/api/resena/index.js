@@ -1,7 +1,7 @@
 /** @format */
 
 import { dbConect } from "utils/mongoose";
-import Task from "models/Task";
+import Resena from "/models/Resena";
 dbConect();
 
 export default async function handler(req, res) {
@@ -10,15 +10,15 @@ export default async function handler(req, res) {
   switch (method) {
     case "GET":
       try {
-        const tasks = await Task.find();
-        res.status(200).json(tasks);
+        const resenas = await Resena.find();
+        res.status(200).json(resenas);
       } catch (error) {}
 
     case "POST":
       try {
-        const newTask = new Task(body);
-        const savedTask = await newTask.save();
-        return res.status(201).json(savedTask);
+        const newResena = new Resena(body);
+        const savedResena = await newResena.save();
+        return res.status(201).json(savedResena);
       } catch (error) {
         return res.status(500).json({ "error": error.message });
       }

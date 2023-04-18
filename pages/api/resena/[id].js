@@ -1,6 +1,6 @@
 /** @format */
 import { dbConect } from "utils/mongoose";
-import Task from "models/Task";
+import Resena from "/models/Resena";
 
 dbConect();
 
@@ -14,19 +14,19 @@ export default async (req, res) => {
   switch (method) {
     case "GET":
       try {
-        const task = await Task.findById(id);
-        if (!task) return res.status(404).json({ msg: "task not found" });
-        return res.status(200).json(task);
+        const resena = await Resena.findById(id);
+        if (!resena) return res.status(404).json({ msg: "resena not found" });
+        return res.status(200).json(resena);
       } catch (error) {
         return res.status(200).json({"error": error.message});
       }
     case "PUT":
       try {
-        const task = await Task.findByIdAndUpdate(id, body, {
+        const resena = await Resena.findByIdAndUpdate(id, body, {
             new: true
         })
-        if (!body)return res.status(404).json({ msg: "task not found" });
-        return res.status(200).json(task);
+        if (!body)return res.status(404).json({ msg: "resena not found" });
+        return res.status(200).json(resena);
       } catch (error) {
         return res.status(500).json({"error": error.message});
         
@@ -34,8 +34,8 @@ export default async (req, res) => {
 
     case "DELETE":
       try {
-        const deleteTask = await Task.findByIdAndDelete(id)
-        if (!deleteTask) return res.status(404).json({ msg: "task not found" })
+        const deleteResena = await Resena.findByIdAndDelete(id)
+        if (!deleteResena) return res.status(404).json({ msg: "resena not found" })
         return res.status(204).json()
       } catch (error) {
         return res.status(400).json({"error": error.message});
