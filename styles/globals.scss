@@ -1,3 +1,6 @@
+/*-----------------------------------------importaciones-------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27');
+
 /*----------------------------clases en general------------------------------------------*/
 :root {
   background: #ede7de;
@@ -102,6 +105,20 @@ body {
   }
 }
 
+.cardText{
+  color: #4f4f4f;
+  font-family: 'Raleway';
+  font-size: 18px;
+}
+.textoSkills {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #025a4e;
+}
+
+
 /*----------------------------clases en fondos------------------------------------------*/
 .nextui-c-dwnaVv {
   background: rgb(103, 148, 185);
@@ -179,6 +196,9 @@ div.clasificacion input:checked ~ label {
   justify-content: center;
   align-items: center;
 }
+.nextui-c-gEEnVX-qXFXw-color-default .nextui-avatar-bg{
+  background-color: transparent;
+}
 /*----------------------------clases de Animaciones------------------------------------------*/
 .divgeek{
   animation: animacionTitulo 2s linear;
@@ -207,4 +227,12 @@ html{
   100%{
     transform:    translateX(0px);
 }
+}
+
+.nextui-c-dwnaVv {
+  transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
 }
