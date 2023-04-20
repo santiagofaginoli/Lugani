@@ -25,6 +25,7 @@ export default function Home({ resenas }) {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false)
 
+
   const [resena, setResena] = useState({
     name: "",
     message: "",
@@ -244,7 +245,7 @@ export default function Home({ resenas }) {
                 <Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className="textoSkills">Fronend</Text>
+                      <Text className="textoSkills">Frontend</Text>
                     </Grid>
                     <Grid justify="end" xs={5}>
                       <motion.div className="textoSkills">{rounded}</motion.div>
@@ -281,7 +282,7 @@ export default function Home({ resenas }) {
                   </Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className="textoSkills">Backend</Text>
+                      <Text className="textoSkills">React</Text>
                     </Grid>
                     <Grid justify="end" xs={5}>
                       <motion.div className="textoSkills">
@@ -300,7 +301,7 @@ export default function Home({ resenas }) {
                   </Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className="textoSkills">Backend</Text>
+                      <Text className="textoSkills">NextUI</Text>
                     </Grid>
                     <Grid justify="end" xs={5}>
                       <motion.div className="textoSkills">
@@ -343,8 +344,13 @@ export default function Home({ resenas }) {
             </Grid>
           </Grid.Container>
           <Grid.Container justify="center" >
-            <Grid xs={8}>
+            <Grid css={{minHeight:300}} xs={8}>
               <SwiperMSG resenas={resenas}></SwiperMSG>
+            </Grid>
+          </Grid.Container>
+          <Grid.Container css={{mt:"30px"}} justify="center">
+            <Grid>
+              <Button css={{bg:"#025a4e;"}} rounded shadow onPress={()=>setVisible(true)}>Send Reviews</Button>
             </Grid>
           </Grid.Container>
         </Grid.Container>
