@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Grid, Text, Avatar, Card, Textarea } from "@nextui-org/react";
-import Svg from "./Svg";
+import Svg from "./svgs/Svg";
 import { color } from "framer-motion";
 
 export default function SwiperMSG({ resenas }) {
@@ -98,7 +98,7 @@ export default function SwiperMSG({ resenas }) {
                         />
                       </Grid>
                       <Grid>
-                        <Text h4> {item.name}</Text>
+                        <Text h4> {item.name} {item.day}/{item.month}/{item.year}</Text>
                       </Grid>
                     </Grid.Container>
                     <Textarea

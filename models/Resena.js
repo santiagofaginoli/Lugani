@@ -21,6 +21,21 @@ const resenaSchema = new Schema(
       required: [true, "punctuation required"],
       required: true,
     },
+    day: {
+      type: Number,
+      required: [true, "day is required"],
+      required: true,
+    },
+    month: {
+      type: Number,
+      required: [true, "month is required"],
+      required: true,
+    },
+    year: {
+      type: Number,
+      required: [true, "year is required"],
+      required: true,
+    }
   },
   {
     timestamps: true,
