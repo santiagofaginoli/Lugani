@@ -23,19 +23,25 @@ export default function contacto() {
   return (
     <Layout>
       <Spacer></Spacer>
-      <Grid.Container>
+      <Grid.Container justify="center">
+        <Grid.Container justify="center" xs={12}>
+          <Grid sm={0} xs={12} justify="center">
+            <Text className="titulo" h1>
+              Contact us
+            </Text>
+          </Grid>
+        </Grid.Container>
         <Grid.Container justify="center" xs={12}>
           <Card className="card-contacto" css={{ mw: "80%" }}>
-            <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-              <Col>
+            <Card.Header css={{ position: "absolute", zIndex: 1, top: 0 }}>
+              <Grid sm={12} xs={0}>
                 <Text className="titulo" h1>
                   Contact us
                 </Text>
-              </Col>
+              </Grid>
             </Card.Header>
             <Card.Body css={{ py: "$10" }}>
-              <Spacer />
-              <Spacer />
+            <Spacer y={4}></Spacer>
               <Grid.Container alignItems="center">
                 <Grid.Container xs={12} md={6}>
                   <Grid alignItems="center">
