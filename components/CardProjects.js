@@ -18,7 +18,7 @@ import {
 import Image from "next/image";
 import SvgNext from "./svgs/SvgNext";
 
-export default function CardProjects({img, text, textTecnos}) {
+export default function CardProjects({img, text, textTecnos, icon1, icon2, icon3, icon4, icon5}) {
   const [visible, setVisible] = useState(false);
   return (
     
@@ -29,12 +29,13 @@ export default function CardProjects({img, text, textTecnos}) {
               onPress={() => setVisible(true)}
               isPressable
               css={{ bg: "#9FA6FF", br: "64px" }}>
-              <Image
+              {/*<Image
                 width={"100%"}
                 height={"auto"}
                 layout='intrinsic'
                 src={img}
               />
+              */}
               <Card.Body
                 css={{
                   textAlign: "center",
@@ -47,9 +48,12 @@ export default function CardProjects({img, text, textTecnos}) {
                       En esta pag utilizamos las siguientes tecnologias:
                     </Text>
                   </Grid>
+
+
                   <Grid.Container justify='center' gap={2}>
                     <Grid>
-                      <SvgNext />
+                    <SvgNext />
+
                     </Grid>
                     <Grid>
                       <SvgNext />
@@ -78,12 +82,13 @@ export default function CardProjects({img, text, textTecnos}) {
             onClose={() => setVisible(false)}
             aria-labelledby='modal-title'
             aria-describedby='modal-description'>
-            <Image
+           {/*  <Image
               width={"100%"}
               height={"auto"}
               layout='intrinsic'
               src={img}
             />
+            */}
             <Modal.Body>
               <Grid.Container>
                 <Grid.Container>

@@ -8,13 +8,11 @@ const resenaSchema = new Schema(
       type: String,
       required: [true, "Title is required"],
       trim: true,
-      maxlenght: [40, "title must be less than 40 characters"],
     },
     message: {
       type: String,
       required: true,
       trim: true,
-      maxlenght: [500, "title must be less than 100 characters"],
     },
     numStars: {
       type: String,
