@@ -29,6 +29,7 @@ body {
   -moz-border-radius: 60px;
   -ms-border-radius: 60px;
   -o-border-radius: 60px;
+  font-family: "Raleway";
 }
 .nextui-c-hhqfap-ieQnWyR-css {
   background: transparent;
@@ -120,6 +121,16 @@ body {
   font-size: 30px;
   color: #025a4e;
 }
+
+.nextui-c-hzQjrs-eSWKVc-cv {
+  color: #17C964;
+  top: -72%;
+  left: 0px;
+  cursor: inherit;
+}
+.nextui-c-hzQjrs-hyKnjc-asPlaceholder-true {
+  color: #17C964;
+}
 /*----------------------------clases en fondos------------------------------------------*/
 .nextui-c-dwnaVv {
   background: rgb(103, 148, 185);
@@ -197,6 +208,8 @@ div.clasificacion input:checked ~ label {
 .nextui-c-dTfjaK-dRBbhr-blur-true {
   backdrop-filter: saturate(180%) blur(5px);
 }
+
+
 /*----------------------------clases de Swiper------------------------------------------*/
 .swiper {
   width: 100%;
@@ -214,16 +227,6 @@ div.clasificacion input:checked ~ label {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  position: absolute;
-  top: var(--swiper-navigation-top-offset, 50%);
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #000000 !important;
 }
 .swiper-pagination-bullet-active{
@@ -275,4 +278,73 @@ html {
   -moz-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
   -ms-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: width 10s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*------------------------------------------------Sweet Alert------------------------------------------------------*/
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+  backdrop-filter: saturate(180%) blur(5px);
+}
+.swal2-icon.swal2-warning {
+  border-color: red !important;
+  color: red !important;
+}
+
+.swal2-container.swal2-center>.swal2-popup {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  background: #f7e7ce5a;
+  border-radius: 45px;
+}
+
+.swal2-title {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.8em 1em 0;
+  color: black !important;
+  font-size: 1.875em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
+  font-family: "Raleway";
+}
+
+
+#swal2-html-container{
+  color: black;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+
+.swal2-styled.swal2-confirm {
+  border: 0;
+  border-radius: 45px !important;
+  background: initial;
+  background-color: #F7E7CE !important;
+  color: black !important;
+  font-size: 1em;
+  font-family: "Raleway";
+  width: 75px;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+  position: absolute;
+  width: 3.75em;
+  height: 7.5em;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  background-color: transparent !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-fix {
+  position: absolute;
+  z-index: 1;
+  top: 0.5em;
+  left: 1.625em;
+  width: 0.4375em;
+  height: 5.625em;
+  transform: rotate(-45deg);
+  background-color: transparent !important;
 }
