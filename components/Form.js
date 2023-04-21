@@ -53,8 +53,8 @@ export default function Form() {
           setVisible(false);
           Swal.fire({
             icon: "success",
-            title: "congratulations",
-            text: "your message has been sent successfully!",
+            title: "Congratulations",
+            text: "Your message has been sent successfully!",
             confirmButtonText: "Ok",
           }).then((resultado) => {
             if (resultado.value) {

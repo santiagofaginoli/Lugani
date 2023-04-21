@@ -35,74 +35,84 @@ export default function SwiperMSG({ resenas }) {
                   }}
                 >
                   <Card.Body>
-                    <Grid.Container
-                      justify="flex-start"
-                      xs={12}
-                      alignItems="center"
-                    >
-                      <Grid css={{ ml: "5px" }}>
-                        <Avatar
-                          squared
-                          css={{ border: "1px solid black", mr: "10px", h:"20px", padding: "0" }}
-                          icon={
-                            <svg
-                              width="25px"
-                              height="25px"
-                              viewBox="-2.4 -2.4 28.80 28.80"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="#000000"
-                              transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
-                              stroke="#ffffff"
-                            >
-                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                              <g
-                                id="SVGRepo_tracerCarrier"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke="#CCCCCC"
-                                stroke-width="0.048"
-                              ></g>
-                              <g id="SVGRepo_iconCarrier">
-                                {" "}
-                                <title></title>{" "}
-                                <g id="Complete">
+                    <Grid.Container xs={12} alignItems="center">
+                      <Grid.Container xs={6}>
+                        <Grid css={{ ml: "5px" }}>
+                          <Avatar
+                            squared
+                            css={{
+                              border: "1px solid black",
+                              mr: "10px",
+                              h: "20px",
+                              padding: "0",
+                            }}
+                            icon={
+                              <svg
+                                width="25px"
+                                height="25px"
+                                viewBox="-2.4 -2.4 28.80 28.80"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="#000000"
+                                transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+                                stroke="#ffffff"
+                              >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g
+                                  id="SVGRepo_tracerCarrier"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke="#CCCCCC"
+                                  stroke-width="0.048"
+                                ></g>
+                                <g id="SVGRepo_iconCarrier">
                                   {" "}
-                                  <g id="user">
+                                  <title></title>{" "}
+                                  <g id="Complete">
                                     {" "}
-                                    <g>
+                                    <g id="user">
                                       {" "}
-                                      <path
-                                        d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
-                                        fill="none"
-                                        stroke="#000000"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.2"
-                                      ></path>{" "}
-                                      <circle
-                                        cx="12"
-                                        cy="7"
-                                        fill="none"
-                                        r="4"
-                                        stroke="#000000"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.2"
-                                      ></circle>{" "}
+                                      <g>
+                                        {" "}
+                                        <path
+                                          d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
+                                          fill="none"
+                                          stroke="#000000"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="1.2"
+                                        ></path>{" "}
+                                        <circle
+                                          cx="12"
+                                          cy="7"
+                                          fill="none"
+                                          r="4"
+                                          stroke="#000000"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="1.2"
+                                        ></circle>{" "}
+                                      </g>{" "}
                                     </g>{" "}
                                   </g>{" "}
-                                </g>{" "}
-                              </g>
-                            </svg>
-                          }
-                        />
-                      </Grid>
-                      <Grid>
-                        <Text h4> {item.name} {item.day}/{item.month}/{item.year}</Text>
-                      </Grid>
+                                </g>
+                              </svg>
+                            }
+                          />
+                        </Grid>
+                        <Grid>
+                          <Text h4> {item.name}</Text>
+                        </Grid>
+                      </Grid.Container>
+                      <Grid.Container justify="flex-end" xs={6}>
+                        <Grid>
+                          <Text h5 css={{ fontWeight: "400" }}>
+                            {item.day}/{item.month}/{item.year}
+                          </Text>
+                        </Grid>
+                      </Grid.Container>
                     </Grid.Container>
                     <Textarea
-                    id="TextArea"
+                      id="TextArea"
                       className="textoArea"
                       css={{ width: "100%" }}
                       initialValue={item.message}

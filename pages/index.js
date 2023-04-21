@@ -69,7 +69,7 @@ export default function Home({ resenas }) {
     setVisible(false);
     Swal.fire({
       icon: "success",
-      title: "Thanks you",
+      title: "Thank you",
       text: "Your review was sent",
     });
   };
