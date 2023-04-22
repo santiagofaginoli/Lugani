@@ -9,6 +9,9 @@
 body {
   background: url("/img/fondo.png") no-repeat;
 }
+a{
+  color: #000000;
+}
 /*----------------------------clases en Navbar------------------------------------------*/
 .navbar {
   width: auto;
@@ -140,6 +143,9 @@ body {
 }
 .nextui-c-eXOOPO {
   background: transparent;
+}
+#boton-Reviws{
+  box-shadow:0 7px 14px 0 #025a4e;
 }
 /*----------------------------clases de Contacto------------------------------------------*/
 .card-contacto {
