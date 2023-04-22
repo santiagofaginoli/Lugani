@@ -85,25 +85,25 @@ export default function Home({ resenas, projects }) {
   const rounded3 = useTransform(count3, (latest) => Math.round(latest));
 
   useEffect(() => {
-    const controls = animate(count, 100, { duration: 10 });
+    const controls = animate(count, 95, { duration: 10 });
 
     return controls.stop;
   }, []);
 
   useEffect(() => {
-    const controls1 = animate(count1, 65, { duration: 10 });
+    const controls1 = animate(count1, 80, { duration: 10 });
 
     return controls1.stop;
   }, []);
 
   useEffect(() => {
-    const controls2 = animate(count2, 20, { duration: 10 });
+    const controls2 = animate(count2, 90, { duration: 10 });
 
     return controls2.stop;
   }, []);
 
   useEffect(() => {
-    const controls3 = animate(count3, 75, { duration: 10 });
+    const controls3 = animate(count3, 85, { duration: 10 });
 
     return controls3.stop;
   }, []);
@@ -222,7 +222,7 @@ export default function Home({ resenas, projects }) {
                     flexDirection: "row",
                   }}>
                   <Grid>
-                    <Text>
+                    <Text className="cardText">
                       We started studying 2 years ago with the basic html, css,
                       sass, bootstrap and javascript files, then we moved to
                       React where we focused on the manage of components and
@@ -256,7 +256,7 @@ export default function Home({ resenas, projects }) {
                       color='secondary'
                       status={"secondary"}
                       size='sm'
-                      value={100}
+                      value={95}
                     />
                   </Grid.Container>
                   <Grid.Container>
@@ -275,12 +275,12 @@ export default function Home({ resenas, projects }) {
                       color='secondary'
                       status={"secondary"}
                       size='sm'
-                      value={65}
+                      value={80}
                     />
                   </Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className='textoSkills'>React</Text>
+                      <Text className='textoSkills'>Next JS</Text>
                     </Grid>
                     <Grid justify='end' xs={5}>
                       <motion.div className='textoSkills'>
@@ -294,12 +294,12 @@ export default function Home({ resenas, projects }) {
                       color='secondary'
                       status={"secondary"}
                       size='sm'
-                      value={20}
+                      value={90}
                     />
                   </Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className='textoSkills'>NextUI</Text>
+                      <Text className='textoSkills'>Next UI</Text>
                     </Grid>
                     <Grid justify='end' xs={5}>
                       <motion.div className='textoSkills'>
@@ -312,7 +312,7 @@ export default function Home({ resenas, projects }) {
                       shadow
                       className='color-prroges'
                       size='sm'
-                      value={75}
+                      value={85}
                     />
                   </Grid.Container>
                 </Grid.Container>
@@ -323,24 +323,27 @@ export default function Home({ resenas, projects }) {
       </section>
       <Spacer y={4} />
       {/* --------------------------------------Section de Project-----------------------------------------------------*/}
-      <section id='Project'>
+      <section id='Project' >
         <Grid.Container justify='center'>
           <Grid>
             <Text className='titulo'>Work</Text>
           </Grid>
         </Grid.Container>
-        {projects.map((project) => (
-          <CardProjects
-            text={project.text}
-            textTecnos={project.textTecnos}
-            img={project.img}
-            icon1={project.icon1}
-            icon2={project.icon2}
-            icon3={project.icon3}
-            icon4={project.icon4}
-            icon5={project.icon5}
+        <Grid.Container justify='center'>
+          {projects.map((project) => (
+            <CardProjects
+              text={project.text}
+              textTecnos={project.textTecnos}
+              img={project.img}
+              icon1={project.icon1}
+              icon2={project.icon2}
+              icon3={project.icon3}
+              icon4={project.icon4}
+              icon5={project.icon5}
+              link={project.link}
             ></CardProjects>
-        ))}
+          ))}
+        </Grid.Container>
       </section>
       <Spacer y={4} />
       {/* --------------------------------------Section de Reviews----------------------------------------------------- */}
@@ -359,7 +362,8 @@ export default function Home({ resenas, projects }) {
           <Grid.Container css={{ mt: "30px" }} justify='center'>
             <Grid>
               <Button
-                css={{ bg: "#025a4e;" }}
+                css={{ bg: "#025a4e;"}}
+                id="boton-Reviws"
                 rounded
                 shadow
                 onPress={() => setVisible(true)}>
