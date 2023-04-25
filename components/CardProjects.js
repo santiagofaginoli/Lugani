@@ -19,10 +19,12 @@ import {
 import SvgNext from "./svgs/SvgNext";
 import Link from "next/link";
 
-export default function CardProjects({ img, text, textTecnos, icon1, icon2, icon3, icon4, icon5,link }) {
+export default function CardProjects({ img, text, textTecnos, icon1, icon2, icon3, icon4, icon5, link }) {
   const [visible, setVisible] = useState(false);
+
+
   return (
-    <Grid justify='center' css={{mb:"30px"}} xs={10} sm={3}>
+    <Grid xs={12}>
       <Grid xs={0} sm={1}></Grid>
       <Card
         onPress={() => setVisible(true)}
@@ -49,7 +51,7 @@ export default function CardProjects({ img, text, textTecnos, icon1, icon2, icon
             </Grid>
             <Grid.Container justify='center' gap={2}>
               <Grid>
-                <SvgNext />
+                <SvgNext/>
               </Grid>
               <Grid>
                 <SvgNext />
@@ -102,12 +104,12 @@ export default function CardProjects({ img, text, textTecnos, icon1, icon2, icon
           <Grid.Container>
             <Grid.Container>
               <Grid xs={6}>
-                <Button onPress={() => setVisible(false)} css={{bg:"#f7e7ce",color:"#000",boxShadow:"0 4px 14px 0 #f7e7ce",fontFamily:"Raleway"}} auto flat rounded >
+                <Button aria-label="tac" onPress={() => setVisible(false)} css={{bg:"#f7e7ce",color:"#000",boxShadow:"0 4px 14px 0 #f7e7ce",fontFamily:"Raleway"}} auto flat rounded >
                   EXIT
                 </Button>
               </Grid>
               <Grid justify='end' xs={6}>
-                <Button  css={{bg:"#f7e7ce",color:"#000",boxShadow:"0 4px 14px 0 #f7e7ce",fontFamily:"Raleway"}} auto flat rounded>
+                <Button aria-label="tac"  css={{bg:"#f7e7ce",color:"#000",boxShadow:"0 4px 14px 0 #f7e7ce",fontFamily:"Raleway"}} auto flat rounded>
                   <Link href={link} target="_blac"> ir a ver</Link>
                 </Button>
               </Grid>

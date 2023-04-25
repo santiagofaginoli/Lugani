@@ -73,7 +73,7 @@ export default function Form() {
         <Grid.Container>
           <Grid.Container justify="center">
             <Grid justify="center" xs={4}>
-              <Input
+              <Input aria-labelledby="tac" 
                 css={{ h: "100%", w: "100%" }}
                 labelPlaceholder="Name"
                 arial-label="nombre"
@@ -98,7 +98,7 @@ export default function Form() {
             </Modal>
             <Spacer></Spacer>
             <Grid xs={4}>
-              <Input
+              <Input aria-labelledby="tac"
                 css={{ h: "100%", w: "100%" }}
                 labelPlaceholder="Email"
                 arial-label="email"
@@ -132,7 +132,7 @@ export default function Form() {
           <Spacer y={1}></Spacer>
           <Grid.Container>
             <Grid xs={12} justify="center">
-              <Button type="submit" className="boton-form">
+              <Button aria-label="tac" type="submit" className="boton-form">
                 Send
               </Button>
             </Grid>

@@ -18,5 +18,5 @@ connection.on("connected", () => {
 });
 
 connection.on("error", (err) => {
-  console.log("error-----------------" + err);
+  console.log("error-----------------------------------------------" + err);
 });

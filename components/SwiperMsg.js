@@ -23,7 +23,7 @@ export default function SwiperMSG({ resenas }) {
         className="mySwiper"
       >
         {resenas.map((item) => (
-          <SwiperSlide>
+          <SwiperSlide key={item.name}>
             <Grid.Container>
               <Grid.Container justify="center" xs={12}>
                 <Card
@@ -56,13 +56,13 @@ export default function SwiperMSG({ resenas }) {
                                 transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
                                 stroke="#ffffff"
                               >
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                                 <g
                                   id="SVGRepo_tracerCarrier"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
                                   stroke="#CCCCCC"
-                                  stroke-width="0.048"
+                                  strokeWidth="0.048"
                                 ></g>
                                 <g id="SVGRepo_iconCarrier">
                                   {" "}
@@ -77,9 +77,9 @@ export default function SwiperMSG({ resenas }) {
                                           d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
                                           fill="none"
                                           stroke="#000000"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="1.2"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="1.2"
                                         ></path>{" "}
                                         <circle
                                           cx="12"
@@ -87,9 +87,9 @@ export default function SwiperMSG({ resenas }) {
                                           fill="none"
                                           r="4"
                                           stroke="#000000"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="1.2"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="1.2"
                                         ></circle>{" "}
                                       </g>{" "}
                                     </g>{" "}
