@@ -354,3 +354,57 @@ html {
   transform: rotate(-45deg);
   background-color: transparent !important;
 }
+//------------------------------------------------Footer------------------------------------------------------/
+.Footer{
+  min-height: 300px;
+  background: url("/img/fondoFooter.avif") no-repeat ;
+  background-size: cover;
+}
+.GridFooter2{
+  background: #2f3c3ae6;
+  min-height: 300px;
+}
+.lineaFooter{
+  background: #000000;
+  box-shadow:0px 7px 14px 0px rgb(0, 0, 0);
+  width: 100%;
+}
+.columnaContac :hover{
+  .lineaFooter{
+    background: #029683;
+    box-shadow:0px 7px 14px 0px #029683; }
+}
+.LineatituloContact{
+  display: flex;
+  flex-wrap: wrap;
+}
+.textofooter {
+  background-image: linear-gradient(
+    to right,
+    #02caaf,
+    #02caaf 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -101%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.textofooter :before{
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.textofooter:hover {
+  background-position: 0;
+}

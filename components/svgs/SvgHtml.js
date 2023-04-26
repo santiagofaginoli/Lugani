@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export  function SvgNextUi() {
+export  function SvgHtml() {
   return (
     <svg
       fill='#575757'

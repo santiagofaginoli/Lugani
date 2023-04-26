@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export  function SvgNextUi() {
+export  function SvgMockApi() {
   return (
     <svg
       fill='#575757'

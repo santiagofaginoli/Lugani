@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export  function SvgNextUi() {
+export  function SvgFramer() {
   return (
     <svg
       fill='#575757'

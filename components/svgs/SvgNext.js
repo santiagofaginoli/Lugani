@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function SvgNext() {
+export  function SvgNext() {
   return (
     <svg
       fill='#575757'
