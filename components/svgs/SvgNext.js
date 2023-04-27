@@ -5,12 +5,12 @@ import React from "react";
 export  function SvgNext() {
   return (
     <svg
-      fill='#575757'
+      fill='#000000'
       width='30px'
       height='30px'
       viewBox='0 0 32 32'
       xmlns='http://www.w3.org/2000/svg'
-      stroke='#575757'>
+      stroke='#000000'>
       <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
       <g
         id='SVGRepo_tracerCarrier'

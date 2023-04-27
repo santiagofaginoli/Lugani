@@ -28,6 +28,7 @@ import {
   SvgNextUi,
   SvgReactNative,
   SvgSass,
+  SvgJava,
 } from "./svgs";
 import Link from "next/link";
 
@@ -47,6 +48,8 @@ export default function CardProjects({
   framerMotion,
   mockApi,
   reactNative,
+  javascript,
+  color
 }) {
   const [visible, setVisible] = useState(false);
 
@@ -56,22 +59,30 @@ export default function CardProjects({
       <Card
         onPress={() => setVisible(true)}
         isPressable
-        css={{ bg: "#9FA6FF", br: "64px" }}>
-        <Image width={"100%"} height={"auto"} layout='intrinsic' src={img} />
+        css={{ bg: "#9FA6FF", br: "64px" }}
+      >
+        <Image width={"100%"} height={"auto"} layout="intrinsic" src={img} />
 
         <Card.Body
           css={{
             textAlign: "center",
             alignItems: "center",
             flexDirection: "row",
-          }}>
+          }}
+        >
           <Grid.Container>
             <Grid>
-              <Text css={{ fontFamily: "Raleway" }}>
+              <Text
+                css={{
+                  fontFamily: "Raleway",
+                  color: "#000",
+                  fontWeight: "700",
+                }}
+              >
                 En esta pag utilizamos las siguientes tecnologias:
               </Text>
             </Grid>
-            <Grid.Container justify='center' gap={2}>
+            <Grid.Container justify="center" gap={2}>
               {nextjs ? (
                 <Grid>
                   <SvgNext />
@@ -159,6 +170,13 @@ export default function CardProjects({
               ) : (
                 <Grid xs={0} />
               )}
+              {html ? (
+                <Grid>
+                  <SvgJava />
+                </Grid>
+              ) : (
+                <Grid xs={0} />
+              )}
             </Grid.Container>
           </Grid.Container>
         </Card.Body>
@@ -167,23 +185,27 @@ export default function CardProjects({
       {/* ----------------------------------Modal------------------------------------  */}
       <Modal
         blur
-        css={{ bg: "#16181a", p: 0, borderRadius: "45px" }}
+        css={{ p: 0, borderRadius: "45px" }}
         closeButton
+        className={color}
         open={visible}
         onClose={() => setVisible(false)}
-        aria-labelledby='modal-title'
-        aria-describedby='modal-description'>
-        <Image width={"100%"} height={"auto"} layout='intrinsic' src={img} />
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+      >
+        <Image width={"100%"} height={"auto"} layout="intrinsic" src={img} />
 
         <Modal.Body>
           <Grid.Container>
-            <Grid.Container>
-              <Text css={{ color: "white", fontFamily: "Raleway" }}>
-                {text}
-              </Text>
+            <Grid.Container justify="flex-end">
+              <Grid>
+                <Text css={{ fontFamily: "Raleway", color: " #025a4e;" }}>
+                  {text}
+                </Text>
+              </Grid>
             </Grid.Container>
             <Grid.Container>
-              <Text css={{ color: "white", fontFamily: "Raleway" }}>
+              <Text css={{ fontFamily: "Raleway", color: " #025a4e;" }}>
                 {textTecnos}
               </Text>
             </Grid.Container>
@@ -194,7 +216,7 @@ export default function CardProjects({
             <Grid.Container>
               <Grid xs={6}>
                 <Button
-                  aria-label='tac'
+                  aria-label="tac"
                   onPress={() => setVisible(false)}
                   css={{
                     bg: "#f7e7ce",
@@ -204,13 +226,14 @@ export default function CardProjects({
                   }}
                   auto
                   flat
-                  rounded>
+                  rounded
+                >
                   EXIT
                 </Button>
               </Grid>
-              <Grid justify='end' xs={6}>
+              <Grid justify="end" xs={6}>
                 <Button
-                  aria-label='tac'
+                  aria-label="tac"
                   css={{
                     bg: "#f7e7ce",
                     color: "#000",
@@ -219,8 +242,9 @@ export default function CardProjects({
                   }}
                   auto
                   flat
-                  rounded>
-                  <Link href={link} target='_blac'>
+                  rounded
+                >
+                  <Link href={link} target="_blac">
                     {" "}
                     ir a ver
                   </Link>

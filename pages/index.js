@@ -365,6 +365,8 @@ export default function Home({ resenas, projects }) {
                 framerMotion={project.framerMotion}
                 mockApi={project.mockApi}
                 reactNative={project.reactNative}
+                javascript={project.javascript}
+                color={project.color}
               />
             </Grid>
           ))}
@@ -474,9 +476,10 @@ export default function Home({ resenas, projects }) {
           <Grid.Container justify='center'>
             <Grid>
               <div class='clasificacion'>
-                <Input
+                <input
                   aria-labelledby='tac'
                   id='radio1'
+                  className="input-estrellas"
                   type='radio'
                   name='numStars'
                   value='5'
@@ -506,7 +509,7 @@ export default function Home({ resenas, projects }) {
                     </g>
                   </svg>
                 </label>
-                <Input
+                <input
                   aria-labelledby='tac'
                   id='radio2'
                   type='radio'
@@ -539,7 +542,7 @@ export default function Home({ resenas, projects }) {
                     </g>
                   </svg>
                 </label>
-                <Input
+                <input
                   aria-labelledby='tac'
                   id='radio3'
                   type='radio'
@@ -573,7 +576,7 @@ export default function Home({ resenas, projects }) {
                     </g>
                   </svg>
                 </label>
-                <Input
+                <input
                   aria-labelledby='tac'
                   id='radio4'
                   type='radio'
@@ -606,7 +609,7 @@ export default function Home({ resenas, projects }) {
                     </g>
                   </svg>
                 </label>
-                <Input
+                <input
                   aria-labelledby='tac'
                   id='radio5'
                   type='radio'
@@ -619,7 +622,7 @@ export default function Home({ resenas, projects }) {
                     });
                   }}
                 />
-                <label aria-label='tac' for='radio5'>
+                <label for='radio5'>
                   <svg
                     width='64px'
                     height='64px'

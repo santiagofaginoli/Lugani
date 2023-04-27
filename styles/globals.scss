@@ -147,12 +147,15 @@ a{
 #boton-Reviws{
   box-shadow:0 7px 14px 0 #025a4e;
 }
+.bgviolet{
+  background: #e426b1;
+}
 /*----------------------------clases de Contacto------------------------------------------*/
 .card-contacto {
   background-color: #172920;
 }
 .boton-form {
-  background: #ede7de;
+  background: #c7c2b9;
   color: #000000;
 }
 ::-webkit-scrollbar {
@@ -199,10 +202,10 @@ div.clasificacion label {
 }
 div.clasificacion label:hover,
 div.clasificacion label:hover ~ label,
-div.clasificacion input:checked ~ label {
+div.clasificacion Input:checked ~ label {
   fill: #dd4;
   stroke: #000000;
-  strokeWidth: 0.3px;
+  stroke-width: 0.3px;
 }
 .nextui-c-jeuecp {
   color: #ffff;
