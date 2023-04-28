@@ -199,13 +199,13 @@ export default function CardProjects({
           <Grid.Container>
             <Grid.Container justify="flex-end">
               <Grid>
-                <Text css={{ fontFamily: "Raleway", color: " #025a4e;" }}>
+                <Text css={{ fontFamily: "Raleway"}} className="textoProject" >
                   {text}
                 </Text>
               </Grid>
             </Grid.Container>
             <Grid.Container>
-              <Text css={{ fontFamily: "Raleway", color: " #025a4e;" }}>
+              <Text css={{ fontFamily: "Raleway"}} className="textoProject" >
                 {textTecnos}
               </Text>
             </Grid.Container>
@@ -218,10 +218,8 @@ export default function CardProjects({
                 <Button
                   aria-label="tac"
                   onPress={() => setVisible(false)}
+                  className="boton-project"
                   css={{
-                    bg: "#f7e7ce",
-                    color: "#000",
-                    boxShadow: "0 4px 14px 0 #f7e7ce",
                     fontFamily: "Raleway",
                   }}
                   auto
@@ -234,17 +232,15 @@ export default function CardProjects({
               <Grid justify="end" xs={6}>
                 <Button
                   aria-label="tac"
+                  className="boton-project"
                   css={{
-                    bg: "#f7e7ce",
-                    color: "#000",
-                    boxShadow: "0 4px 14px 0 #f7e7ce",
                     fontFamily: "Raleway",
                   }}
                   auto
                   flat
                   rounded
                 >
-                  <Link href={link} target="_blac">
+                  <Link className="linkProject" href={link} target="_blac">
                     {" "}
                     ir a ver
                   </Link>

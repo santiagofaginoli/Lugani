@@ -134,6 +134,24 @@ a{
 .nextui-c-hzQjrs-hyKnjc-asPlaceholder-true {
   color: #17C964;
 }
+.bgviolet .textoProject{
+  color:  #ffff;
+}
+.bgviolet .boton-project .linkProject{
+  color: #ffff;
+}
+.bgverde .textoProject{
+  color:  #fff;
+}
+.bgverde .boton-project .linkProject{
+  color: #ffff;
+}
+.bgblack .textoProject{
+  color:  #ffff;
+}
+.bgblack .boton-project .linkProject{
+  color: #ffff;
+}
 /*----------------------------clases en fondos------------------------------------------*/
 .nextui-c-dwnaVv {
   background: rgb(103, 148, 185);
@@ -148,8 +166,27 @@ a{
   box-shadow:0 7px 14px 0 #025a4e;
 }
 .bgviolet{
-  background: #e426b1;
+  background: #250b2e;
 }
+.bgviolet .boton-project{
+  background: #a22c62;
+  color: #ffff;
+}
+.bgverde{
+  background: #10472c;
+}
+.bgverde .boton-project{
+  background-color: #006ffb;
+  color: #ffff;
+}
+.bgblack{
+  background: #000;
+}
+.bgblack .boton-project{
+  background-color: #006ffb;
+  color: #ffff;
+}
+
 /*----------------------------clases de Contacto------------------------------------------*/
 .card-contacto {
   background-color: #172920;
@@ -359,13 +396,16 @@ html {
 }
 //------------------------------------------------Footer------------------------------------------------------/
 .Footer{
-  min-height: 300px;
-  background: url("/img/fondoFooter.avif") no-repeat ;
+  min-height: 400px;
+  background: url("/img/fondoFooter.jpg") no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 .GridFooter2{
-  background: #2f3c3ae6;
-  min-height: 300px;
+  background: rgba(0, 0, 139, 0.193);
+  min-height: 400;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .lineaFooter{
   background: #000000;
