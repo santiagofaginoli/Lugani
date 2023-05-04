@@ -129,7 +129,7 @@ export default function Home({ resenas, projects }) {
             <Text className='titulo divgeek'>We are DivGeeks</Text>
           </Grid>
           <Grid className='titulo-abajo' justify='center'>
-            <Text className='titulo divgeek'>Web developers</Text>
+            <Text className='titulo divgeek notranslate'>Web developers</Text>
           </Grid>
           <Grid.Container justify='center'>
             <Text className='frase divgeek'>
@@ -292,7 +292,7 @@ export default function Home({ resenas, projects }) {
                   </Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className='textoSkills'>Next JS</Text>
+                      <Text className='textoSkills notranslate'>Next JS</Text>
                     </Grid>
                     <Grid justify='end' xs={5}>
                       <motion.div className='textoSkills'>
@@ -311,7 +311,7 @@ export default function Home({ resenas, projects }) {
                   </Grid.Container>
                   <Grid.Container>
                     <Grid xs={6}>
-                      <Text className='textoSkills'>Next UI</Text>
+                      <Text  className='textoSkills notranslate '>Next UI</Text>
                     </Grid>
                     <Grid justify='end' xs={5}>
                       <motion.div className='textoSkills'>

@@ -23,7 +23,7 @@ export default function contacto() {
   return (
     <Layout>
       <Spacer></Spacer>
-      <Grid.Container justify="center">
+      <Grid.Container justify="center" css={{mb:"25px"}}>
         <Grid.Container justify="center" xs={12}>
           <Grid sm={0} xs={12} justify="center">
             <Text className="titulo" h1>

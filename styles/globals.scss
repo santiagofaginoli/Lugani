@@ -12,6 +12,12 @@ body {
 a{
   color: #000000;
 }
+.notranslate {
+  -webkit-user-modify: read-write-plaintext-only;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
 /*----------------------------clases en Navbar------------------------------------------*/
 .navbar {
   width: auto;
@@ -59,6 +65,11 @@ a{
   transition: all 0.5s;
 }
 /*----------------------------clases en Textos------------------------------------------*/
+.fraseFooter{
+  color: #dad0d0;
+  font-weight: 400;
+  font-family: Raleway;
+}
 #TextArea {
   color: #000000 !important;
 }
@@ -185,6 +196,10 @@ a{
 .bgblack .boton-project{
   background-color: #006ffb;
   color: #ffff;
+}
+
+#avatarFooter img{
+  background: transparent;
 }
 
 /*----------------------------clases de Contacto------------------------------------------*/
@@ -402,7 +417,7 @@ html {
   background-size: cover;
 }
 .GridFooter2{
-  background: rgba(0, 0, 139, 0.193);
+  background: rgba(241, 248, 255, 0.193);
   min-height: 400;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -412,21 +427,14 @@ html {
   box-shadow:0px 7px 14px 0px rgb(0, 0, 0);
   width: 100%;
 }
-.columnaContac :hover{
-  .lineaFooter{
-    background: #029683;
-    box-shadow:0px 7px 14px 0px #029683; }
-}
-.LineatituloContact{
-  display: flex;
-  flex-wrap: wrap;
-}
+
+
 .textofooter {
   background-image: linear-gradient(
     to right,
-    #02caaf,
-    #02caaf 50%,
-    #000 50%
+    #302f2f,
+    #505050 50%,
+    #dad0d0 50%
   );
   background-size: 200% 100%;
   background-position: -101%;
@@ -436,6 +444,8 @@ html {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
+  font-weight: 700;
+
 }
 .textofooter :before{
   content: '';

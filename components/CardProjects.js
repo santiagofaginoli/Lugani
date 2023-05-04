@@ -226,7 +226,7 @@ export default function CardProjects({
                   flat
                   rounded
                 >
-                  EXIT
+                  Exit
                 </Button>
               </Grid>
               <Grid justify="end" xs={6}>
@@ -242,7 +242,7 @@ export default function CardProjects({
                 >
                   <Link className="linkProject" href={link} target="_blac">
                     {" "}
-                    ir a ver
+                    Show more
                   </Link>
                 </Button>
               </Grid>
