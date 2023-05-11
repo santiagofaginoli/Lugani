@@ -5,7 +5,7 @@ import React from "react";
 export function SvgNextUi() {
   return (
     <svg
-      class="nextui-c-kTXuUg nextui-c-kTXuUg-gQUngL-auto-true nextui-c-kTXuUg-iORzQg-css navbar__logo"
+      className="nextui-c-kTXuUg nextui-c-kTXuUg-gQUngL-auto-true nextui-c-kTXuUg-iORzQg-css navbar__logo"
       height="30px"
       viewBox="0 0 43 43"
       width="30px"

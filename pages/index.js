@@ -20,6 +20,7 @@ import Layout from "/components/Layout";
 import SwiperMSG from "/components/SwiperMsg";
 import Swal from "sweetalert2";
 import CardProjects from "@/components/CardProjects";
+
 export default function Home({ resenas, projects }) {
   const fecha = new Date();
   const dia = fecha.getDate();
@@ -389,6 +390,7 @@ export default function Home({ resenas, projects }) {
           <Grid.Container css={{ mt: "30px" }} justify='center'>
             <Grid>
               <Button
+               aria-label="Send"
                 css={{ bg: "#025a4e;" }}
                 id='boton-Reviws'
                 rounded
@@ -475,7 +477,7 @@ export default function Home({ resenas, projects }) {
           />
           <Grid.Container justify='center'>
             <Grid>
-              <div class='clasificacion'>
+              <div className='clasificacion'>
                 <input
                   aria-labelledby='tac'
                   id='radio1'
@@ -622,7 +624,7 @@ export default function Home({ resenas, projects }) {
                     });
                   }}
                 />
-                <label for='radio5'>
+                <label  aria-label="Close" for='radio5'>
                   <svg
                     width='64px'
                     height='64px'
@@ -647,6 +649,7 @@ export default function Home({ resenas, projects }) {
         </Modal.Body>
         <Modal.Footer>
           <Button
+           aria-label="Close"
             css={{ bg: "#3a3d44", color: "White" }}
             auto
             flat
@@ -654,6 +657,7 @@ export default function Home({ resenas, projects }) {
             Close
           </Button>
           <Button
+           aria-label="enviar"
             css={{ bg: "#3a3d44", color: "White" }}
             auto
             onPress={() => verificacion()}>

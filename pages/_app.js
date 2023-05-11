@@ -1,11 +1,10 @@
 import '../styles/globals.scss'
 // 1. import `NextUIProvider` component
 import { NextUIProvider } from '@nextui-org/react';
-
+import { useId } from "@react-aria/utils";
 function MyApp({ Component, pageProps }) {
   return (
-    // 2. Use at the root of your app
-    <NextUIProvider>
+    <NextUIProvider  >
       <Component {...pageProps} />
     </NextUIProvider>
   );
