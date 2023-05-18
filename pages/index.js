@@ -179,7 +179,7 @@ export default function Home({ resenas, projects }) {
                 >
                   <Grid>
                     <Text className="cardText">
-                      Somos un grupo formado por 3 Argentinos, estudiamos
+                      Somos un grupo formado por 3 Argentinos Santiago Faginoli, Nicolas Pereyra y Lautaro Faure, estudiamos
                       programacion desde hace 2 años, nos centramos en el
                       desarrollo de paginas y aplicaciones web, vamos a estudiar
                       ciencias de la computacion el año siguiente, nos gustan
