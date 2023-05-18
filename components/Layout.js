@@ -16,7 +16,7 @@ export default function Layout({ children }) {
         />
         <meta name="author" content="DivGeeks" />
         <meta name="robots" content="index" />
-        <meta lang="en"/>
+        <meta lang="es"/>
         <meta
           name="keywords"
           content="desarrolo web, paginas web, web development, web page, nextJs, html, css, wonderful, increible, asombroso, incredible, amazing, empresa de desarrolo web, web development company"
@@ -33,13 +33,13 @@ export default function Layout({ children }) {
               Home
             </Navbar.Link>
             <Navbar.Link className="items-navbar notranslate" href="/contacto/contacto">
-              Contact
+              Contacto
             </Navbar.Link>
             <Navbar.Link className="items-navbar notranslate" href="/#Project">
-              Work
+              Trabajos
             </Navbar.Link>
             <Navbar.Link className="items-navbar notranslate" href="/#Skills">
-              Skills
+              Habilidades
             </Navbar.Link>
           </Navbar.Content>
         </Navbar>

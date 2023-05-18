@@ -27,7 +27,7 @@ export default function contacto() {
         <Grid.Container justify="center" xs={12}>
           <Grid sm={0} xs={12} justify="center">
             <Text className="titulo" h1>
-              Contact us
+              Contactanos
             </Text>
           </Grid>
         </Grid.Container>
@@ -36,7 +36,7 @@ export default function contacto() {
             <Card.Header css={{ position: "absolute", zIndex: 1, top: 0 }}>
               <Grid sm={12} xs={0}>
                 <Text className="titulo" h1>
-                  Contact us
+                  Contactanos
                 </Text>
               </Grid>
             </Card.Header>

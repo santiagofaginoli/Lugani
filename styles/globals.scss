@@ -13,7 +13,7 @@ a{
   color: #000000;
 }
 .notranslate {
-  -webkit-user-modify: read-write-plaintext-only;
+  -webkit-user-modify: read-plaintext-only;
   color: inherit;
   background-color: inherit;
   border: none;
